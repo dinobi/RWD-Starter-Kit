@@ -1,0 +1,80 @@
+// All other scss files will import this base file, and will be defined
+// specific to the styles they cater for, and be placed in their respective
+// folder
+
+
+// import all necessary external styles
+@import url("https://fonts.googleapis.com/css?family=Timmana");
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+// import partials
+@import 'partials/reset';
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/typography';
+
+$primary-font: 'Timmana', verdana, sans-serif;
+
+html{
+  margin: 0;
+  font-family: $primary-font;
+}
+
+@media screen and (max-width:575px){
+	html {
+    font-size: 47.5%;
+  }
+}
+@media screen and (min-width:576px){
+  html {
+    font-size: 48.5%;
+  }
+}
+@media screen and (min-width:768px){
+	html {
+    font-size: 52.5%;
+  }
+}
+@media screen and (min-width:996px){
+	html {
+    font-size: 57.5%;
+  }
+}
+@media screen and (min-width:1200px){
+	html {
+		font-size: 62.5%;
+	}
+}
+body {
+	width: 100%;
+  padding: 0 auto;
+  font-family: $primary-font;
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: $white;
+  background: $primary-blue;
+	text-align: center;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+.super-box {
+  display: block;
+  position: relative;
+  padding: 3rem 0;
+  min-height: 3rem;
+}
+.box {
+  width: 80%;
+  margin: 0 auto;
+}
+@media only screen and (min-width: $break-point-ntablet) {
+  .super-box {
+    padding: 6rem 0;
+    width: 100%;
+  }
+  .box {
+    width: 80%;
+  }
+}

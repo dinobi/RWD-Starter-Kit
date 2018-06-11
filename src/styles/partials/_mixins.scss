@@ -1,0 +1,27 @@
+// Break point
+@mixin cameleon($media) {
+  @if $media == tablet-portrait {
+    @media only screen and (min-width: $tablet-portrait-up)
+    {
+      @content;
+    }
+  }
+  @else if $media == tablet-landscape {
+    @media only screen and (min-width: $tablet-landscape-up)
+    {
+      @content;
+    }
+  }
+  @else if $media == desktop {
+    @media only screen and (min-width: $desktop-up)
+    {
+      @content;
+    }
+  }
+  @else if $media == large-desktop {
+    @media only screen and (min-width: $large-desktop-up)
+    {
+      @content;
+    }
+  }
+}
